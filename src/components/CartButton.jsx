@@ -2,6 +2,7 @@
 // keep the add to cart component here
 const CartButton = () => {
     //manage state of the count 
+    const[count,stateCount]=useState(0)
   return <>
   {/* add to cart button */}
   {/* count with - and  + button */}
