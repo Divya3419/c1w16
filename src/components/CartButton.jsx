@@ -21,6 +21,8 @@ const CartButton = () => {
       }
       setCount(count + value);
     };
+
+    
   return cart ? (
     <button onClick={addCart}>Add to Cart</button>
   ) :( <>
