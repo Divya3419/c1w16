@@ -1,7 +1,6 @@
 // reusable card component
 import CartButton from "./CartButton"
 const GroceryItem = ({ele}) => {
-
   return( 
 
 <div>
@@ -10,7 +9,7 @@ const GroceryItem = ({ele}) => {
   <p>{ele.title}</p>
   <p>{ele.mrp}</p>
 <p>{ele.sellingPrice}</p>
-<button>Add to Cart</button>
+
   <CartButton/>
 </div>
   

@@ -11,7 +11,7 @@ const GroceryDetails = ()=>{
         <>
         <h1 style={{color:"pink",border:"2px solid black"}}>Groceries</h1>
         <div className={styles.container}>
-            {/* map through the data and display the cards */}
+            
         {data.map((ele)=>{
             return(
 <GroceryItem key={ele.id} ele={ele}/>

@@ -1,16 +1,35 @@
 import React,{useState} from 'react'
-// keep the add to cart component here
+
 const CartButton = () => {
-    //manage state of the count 
+    
     const[count,setCount]=useState(0);
-  return <>
-  {/* add to cart button */}
-  {/* count with - and  + button */}
+
+    const [cart,setCart]=useState(true);
+
+    const addCart=()=>{
+      setCart(false);
+      setCount(1)
+    }
+
+    const handleChange = (value) => {
+      let result = count + value;
+      if (result > 0) {
+        setCart(false);
+      }
+       else {
+        setCart(true);
+      }
+      setCount(count + value);
+    };
+  return cart ? (
+    <button onClick={addCart}>Add to Cart</button>
+  ) :( <>
   <div>
-      <button onClick={()=>{setCount(count-1)}}>-</button>
+      <button onClick={()=>handleChange(-1)}>-</button>
       <p className="count-item">{count}</p>
-      <button onClick={()=>{setCount(count+1)}}>+</button>
+      <button onClick={()=>handleChange(1)}>+</button>
   </div>
-  </>;
+  </>
+  )
 };
 export default CartButton
