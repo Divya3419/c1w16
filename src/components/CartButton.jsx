@@ -1,6 +1,7 @@
+
 import React,{ useState} from "react"
 
-const CartButton = () => {
+export const CartButton = () => {
   const[count,setCount]=useState(0)
   const[cart,setCart]=useState(true)
 
@@ -32,6 +33,5 @@ const CartButton = () => {
        <p className="count-item">{count}</p> 
       <button onClick={inc}>+</button>
   </div>}
-  </>;
-};
-export default CartButton
+</>
+}

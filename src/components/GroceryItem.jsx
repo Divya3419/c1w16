@@ -1,7 +1,8 @@
-import CartButton from "./CartButton";
+
+import {CartButton} from "./CartButton";
 
 
-const GroceryItem = ({ele}) => {
+export const GroceryItem = ({ele}) => {
   return <>
  <div>
     <p style={{textAlign: 'left',backgroundColor: 'red',borderRadius:"250px",width:"10%",height:"40px",color:"white"}}>{ele.discount}</p>
@@ -17,5 +18,4 @@ const GroceryItem = ({ele}) => {
                 </div>
 
   </>;
-};
-export default GroceryItem;
+}
